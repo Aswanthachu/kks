@@ -12,12 +12,11 @@ const userSchema = mongoose.Schema({
         type: String,
         required: true,
         default: null,
-        unique: true
+        unique:true
     },
     hashedPassword: {
         type: String,
     },
-    salt:String,
     role: {
         type: Number,
         default: 0
@@ -26,12 +25,12 @@ const userSchema = mongoose.Schema({
         type: mongoose.Schema.ObjectId,
         ref: "token"
     },
-    accessToken:{
+    uid:{
         type:String
     },
     profilePic:{
         type:String
-    }
+    },
 });
 
 // userSchema
